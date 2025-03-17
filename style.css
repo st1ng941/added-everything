@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styles */
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00bfff;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    margin-left: 20px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #00bfff;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #000, #1a1a1a);
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00bfff, #0077ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGlow 2s infinite alternate, float 3s ease-in-out infinite;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out, float 3s ease-in-out infinite;
+  }
+  
+  .btn-hero {
+    background-color: #00bfff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+  
+  .btn-hero:hover {
+    background-color: #0077ff;
+    transform: scale(1.1);
+  }
+  
+  @keyframes textGlow {
+    from { text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff; }
+    to { text-shadow: 0 0 20px #0077ff, 0 0 40px #0077ff; }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Event Details */
+  .event-details {
+    padding: 80px 0;
+  }
+  
+  .detail-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  /* Schedule Section */
+  .schedule {
+    padding: 80px 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .schedule-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .schedule-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .schedule-icon {
+    font-size: 3rem;
+    color: #00bfff;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .schedule-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .schedule-card:hover .schedule-icon {
+    opacity: 0;
+  }
+  
+  .schedule-card:hover .schedule-text {
+    opacity: 1;
+  }
+  
+  /* Registration Section */
+  .registration {
+    padding: 80px 0;
+  }
+  
+  .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ccc;
+    color: white;
+  }
+  
+  .btn-custom {
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-custom:hover {
+    background-color: #0077ff;
+  }
+  
+  /* Footer */
+  .footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .social-links a {
+    color: #00bfff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #0077ff;
+  }
